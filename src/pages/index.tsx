@@ -19,7 +19,7 @@ export default function Index({user, msgs, dates, authors}:any){
     </Head>
     <p style = {{color:"var(--secondary)"}}>
       Come say hi, &quot;{user}&quot;!
-      <button className = "logout" style = {{float:"right", marginRight:15, display:"flex", alignItems:"center"}} onClick = {() => router.push("/api/routes/logout")}>
+      <button className = "danger" style = {{float:"right", marginRight:15, display:"flex", alignItems:"center"}} onClick = {() => router.push("/api/routes/logout")}>
         Logout&nbsp;&nbsp;<LogOut size = {15}/>
       </button>
     </p>
