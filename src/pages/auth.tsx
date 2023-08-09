@@ -35,7 +35,7 @@ export default function Auth(){
             <p className = "switch" onClick = {()=> setState(!state)}>No Account?</p>
             </>:
             <>
-            <form action = "/api/actions/signup" method = "POST">
+            <form action = "/api/routes/signup" method = "POST">
                 <br></br>
                 <label>Username</label>
                 <div style = {{padding:"2px"}}></div>

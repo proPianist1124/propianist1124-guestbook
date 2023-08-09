@@ -15,7 +15,7 @@ export default async function handler(req, res){
             const password = req.body.password;
     
             await supabase.from("users").insert({ name: username, password: password });
-            res.redirect(302, "/");
+            res.redirect(307, "/");
         }
     }else{
         res.send("Bad request");
