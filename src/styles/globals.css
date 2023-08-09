@@ -4,8 +4,11 @@
   --background:#000;
   --background-lighter:#272626;
   --primary:#e5e3e3;
-  --secondary:#a4a4a4;
-  --error:#D9544D;
+  --primary-darker:#c0bdbd;
+  --secondary:#8c8c93;
+  --error:#cf364c;
+  --error-darker:#3f1f21;
+  --error-darkest:#2b0613;
 }
 
 body{
@@ -13,28 +16,48 @@ body{
   color:var(--primary);
   font-family:"Inter", sans-serif;
 }
+
+label{
+  color:var(--secondary);
+}
+
 input{
+  box-sizing: border-box;
   background-color:var(--background);
-  color:var(--primary);
+  color:var(--secondary);
   border:1px solid var(--background-lighter);
   font-family:"Inter", sans-serif;
-  padding:4px 8px;
+  padding:8px 12px;
+  border-radius:7px;
   transition:0.15s;
 }
 input:focus{
   outline:none;
-  background-color:var(--background-lighter);
-}
-button{
-  background-color:var(--background);
   color:var(--primary);
-  border:1px solid var(--background-lighter);
+  border-color:var(--primary-darker);
+}
+
+button{
+  background-color:var(--primary);
+  color:var(--background);
+  border:none;
   font-family:"Inter", sans-serif;
-  padding:4px 8px;
-  transition:0.15s;
+  padding:8px 12px;
+  border-radius:7px;
+  font-weight:450;
+  transition:0.3s;
 }
 button:hover{
-  background-color:var(--background-lighter);
+  cursor:pointer;
+  background-color:var(--primary-darker);
+}
+button.logout{
+  color:var(--error);
+  background-color: var(--error-darkest);
+  border:1px solid var(--error-darker);
+}
+button.logout:hover{
+  background-color:var(--error-darker);
 }
 
 a{
@@ -43,4 +66,46 @@ a{
 }
 a:hover{
   text-decoration:underline;
+}
+
+p.switch{
+  float:right;
+  text-decoration:none;
+  color:var(--secondary);
+}
+p.switch:hover{
+  text-decoration:underline;
+  cursor:pointer;
+}
+
+h2.brand{
+  text-decoration:none;
+}
+h2.brand:hover{
+  cursor:pointer;
+  text-decoration:underline;
+}
+
+div.card{
+  margin:auto;
+  max-width:600px;
+  padding:10px 10px;
+  border-radius:10px;
+  border:1px solid var(--background-lighter);
+}
+
+div.message{
+  padding:8px 4px;
+  border:1px solid var(--background-lighter);
+  border-radius:10px;
+  margin-bottom:10px;
+  max-width:400px;
+}
+div.message span{
+  color:var(--primary-darker);
+}
+
+div.message span.date{
+  float:right;
+  color:var(--secondary);
 }
