@@ -31,12 +31,13 @@ export default function Index({user, msgs, dates, authors}:any){
       </form>
     </div>
     <br></br>
-    <div className = "card" style = {{lineHeight:1.5}}>
+    <div className = "card" style = {{maxWidth:700}}>
       {msgs.map((msg: string | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined) =>
         <div key = {`${msg}`} className = "message">
-          {authors[msgs.indexOf(msg)]}: <span>{String(msg).slice(2)}</span><span className = "date">{dates[msgs.indexOf(msg)]}</span>
+          {authors[msgs.indexOf(msg)]}: <span>{String(msg).slice(2)}</span><span style = {{color:"var(--secondary)", float:"right"}}>{dates[msgs.indexOf(msg)]}</span>
         </div>
       )}
+      <br></br>
     </div>
     </>
   )

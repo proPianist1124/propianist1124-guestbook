@@ -21,7 +21,8 @@ div.message{
   border:1px solid var(--background-lighter);
   border-radius:10px;
   margin-bottom:10px;
-  max-width:400px;
+  max-width:500px;
+  overflow:hidden;
 }
 div.message span{
   color:var(--primary-darker);
